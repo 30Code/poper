@@ -1,15 +1,16 @@
-package com.fanwe.poper;
+package cn.linhome.poper;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.fanwe.lib.poper.FPoper;
 import com.fanwe.library.SDLibrary;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import cn.linhome.lib.poper.FPoper;
 
 public class SimpleActivity extends AppCompatActivity
 {

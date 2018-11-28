@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.fanwe.poper">
+          package="cn.linhome.poper">
 
     <application
         android:allowBackup="true"

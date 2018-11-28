@@ -1,14 +1,11 @@
-package com.fanwe.poper;
+package cn.linhome.poper;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.fanwe.lib.poper.FPoper;
-import com.fanwe.library.adapter.SDSimpleAdapter;
 import com.fanwe.library.adapter.SDSimpleRecyclerAdapter;
 import com.fanwe.library.adapter.viewholder.SDRecyclerViewHolder;
 import com.fanwe.library.view.SDAppView;
@@ -16,6 +13,8 @@ import com.fanwe.library.view.SDRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.linhome.lib.poper.FPoper;
 
 public class TestPopView extends SDAppView
 {

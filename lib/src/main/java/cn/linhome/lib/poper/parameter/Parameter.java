@@ -13,40 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.lib.poper.parameter;
+package cn.linhome.lib.poper.parameter;
 
 import android.view.View;
 import android.view.ViewGroup;
 
-public class HeightParameter implements Parameter
+public interface Parameter
 {
-    @Override
-    public int getSize(View view)
-    {
-        return view.getHeight();
-    }
+    int getSize(View view);
 
-    @Override
-    public int getStartBound(View view)
-    {
-        return view.getTop();
-    }
+    int getStartBound(View view);
 
-    @Override
-    public int getEndBound(View view)
-    {
-        return view.getBottom();
-    }
+    int getEndBound(View view);
 
-    @Override
-    public int getLayoutParamsSize(ViewGroup.LayoutParams params)
-    {
-        return params.height;
-    }
+    int getLayoutParamsSize(ViewGroup.LayoutParams params);
 
-    @Override
-    public void setLayoutParamsSize(ViewGroup.LayoutParams params, int size)
-    {
-        params.height = size;
-    }
+    void setLayoutParamsSize(ViewGroup.LayoutParams params, int size);
 }

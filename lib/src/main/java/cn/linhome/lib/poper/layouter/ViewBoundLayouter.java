@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.lib.poper.layouter;
+package cn.linhome.lib.poper.layouter;
 
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.fanwe.lib.poper.FPoper;
-
 import java.lang.ref.WeakReference;
+
+import cn.linhome.lib.poper.FPoper;
 
 /**
  * 让popview的大小跟随某个view的大小

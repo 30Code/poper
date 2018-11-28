@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.lib.poper;
+package cn.linhome.lib.poper;
 
 import android.app.Activity;
 import android.os.Build;
@@ -23,11 +23,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
-import com.fanwe.lib.poper.layouter.PopLayouter;
-
 import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+
+import cn.linhome.lib.poper.layouter.PopLayouter;
 
 /**
  * 可以让PopView显示在Target的某个位置

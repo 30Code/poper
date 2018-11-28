@@ -13,26 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.lib.poper.layouter;
+package cn.linhome.lib.poper.layouter;
 
-public abstract class AbstractLayouter implements PopLayouter
+import android.view.View;
+
+import cn.linhome.lib.poper.FPoper;
+
+/**
+ * popview绘制接口
+ */
+public interface PopLayouter
 {
-    private boolean mIsDebug;
-
-
-    public final boolean isDebug()
-    {
-        return mIsDebug;
-    }
-
-    public AbstractLayouter setDebug(boolean debug)
-    {
-        mIsDebug = debug;
-        return this;
-    }
-
-    protected String getDebugTag()
-    {
-        return getClass().getSimpleName();
-    }
+    /**
+     * 刷新popview的位置
+     *
+     * @param popView
+     * @param popViewParent popview父布局
+     * @param poper
+     */
+    void layout(View popView, View popViewParent, FPoper poper);
 }

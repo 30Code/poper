@@ -1,21 +1,23 @@
-package com.fanwe.poper.dialog;
+package cn.linhome.poper;
 
-import android.app.Activity;
+import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.fanwe.lib.dialog.impl.SDDialogConfirm;
-import com.fanwe.lib.poper.FPoper;
-import com.fanwe.lib.poper.layouter.BoundLayouter;
-import com.fanwe.lib.poper.layouter.FixBoundLayouter;
 import com.fanwe.lib.utils.FViewUtil;
-import com.fanwe.poper.R;
-import com.fanwe.poper.TestPopView;
+import com.fanwe.library.activity.SDBaseActivity;
+
+import cn.linhome.lib.poper.FPoper;
+import cn.linhome.lib.poper.layouter.BoundLayouter;
+import cn.linhome.lib.poper.layouter.FixBoundLayouter;
+import cn.linhome.lib.poper.layouter.ViewBoundLayouter;
 
 /**
  * Created by Administrator on 2018/1/10.
  */
-public class TestDialog extends SDDialogConfirm
+
+public class AutoActivity extends SDBaseActivity
 {
     private Button btn_big;
     private Button btn_small;
@@ -24,10 +26,10 @@ public class TestDialog extends SDDialogConfirm
 
     private TestPopView mPopView;
 
-    public TestDialog(Activity activity)
+    @Override
+    protected void init(Bundle savedInstanceState)
     {
-        super(activity);
-        setCustomView(R.layout.dialog_test);
+        setContentView(R.layout.act_auto);
         btn_big = findViewById(R.id.btn_big);
         btn_small = findViewById(R.id.btn_small);
         btn_pop = findViewById(R.id.btn_pop);
@@ -63,21 +65,17 @@ public class TestDialog extends SDDialogConfirm
     {
         if (mPopView == null)
         {
-            mPopView = new TestPopView(getOwnerActivity());
+            mPopView = new TestPopView(this);
+            mPopView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT));
             mPopView.getPoper()
-                    .addPopLayouter(new FixBoundLayouter(BoundLayouter.Bound.Width).setDebug(true))
-                    .addPopLayouter(new FixBoundLayouter(BoundLayouter.Bound.Height).setDebug(true))
-                    .setContainer(fl_content)
+                    .addPopLayouter(new ViewBoundLayouter(BoundLayouter.Bound.Width, btn_pop)
+                            .setDebug(true))
+                    .addPopLayouter(new FixBoundLayouter(BoundLayouter.Bound.Height)
+                            .setDebug(true))
                     .setTarget(btn_pop)
-                    .setPosition(FPoper.Position.LeftOutsideTop);
+                    .setPosition(FPoper.Position.BottomOutsideCenter);
         }
         return mPopView;
-    }
-
-    @Override
-    protected void onStop()
-    {
-        super.onStop();
-        getPopView().getPoper().attach(false);
     }
 }

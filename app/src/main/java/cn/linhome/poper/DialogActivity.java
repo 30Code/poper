@@ -1,15 +1,11 @@
-package com.fanwe.poper;
+package cn.linhome.poper;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.fanwe.library.activity.SDBaseActivity;
-import com.fanwe.poper.dialog.TestDialog;
-
-/**
- * Created by Administrator on 2018/1/10.
- */
+import cn.linhome.poper.dialog.TestDialog;
 
 public class DialogActivity extends SDBaseActivity
 {

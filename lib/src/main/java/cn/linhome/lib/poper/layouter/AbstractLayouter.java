@@ -13,20 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.lib.poper.parameter;
+package cn.linhome.lib.poper.layouter;
 
-import android.view.View;
-import android.view.ViewGroup;
-
-public interface Parameter
+public abstract class AbstractLayouter implements PopLayouter
 {
-    int getSize(View view);
+    private boolean mIsDebug;
 
-    int getStartBound(View view);
 
-    int getEndBound(View view);
+    public final boolean isDebug()
+    {
+        return mIsDebug;
+    }
 
-    int getLayoutParamsSize(ViewGroup.LayoutParams params);
+    public AbstractLayouter setDebug(boolean debug)
+    {
+        mIsDebug = debug;
+        return this;
+    }
 
-    void setLayoutParamsSize(ViewGroup.LayoutParams params, int size);
+    protected String getDebugTag()
+    {
+        return getClass().getSimpleName();
+    }
 }

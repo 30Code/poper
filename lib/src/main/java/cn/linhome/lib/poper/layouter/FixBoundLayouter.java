@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fanwe.lib.poper.layouter;
+package cn.linhome.lib.poper.layouter;
 
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.fanwe.lib.poper.FPoper;
+import cn.linhome.lib.poper.FPoper;
 
 /**
  * 当popview边界超出父布局边界的时候，修正popview超出边界的部分，让popview边界刚好和父布局边界重合
