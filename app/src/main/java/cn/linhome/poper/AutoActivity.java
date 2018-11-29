@@ -13,10 +13,6 @@ import cn.linhome.lib.poper.layouter.BoundLayouter;
 import cn.linhome.lib.poper.layouter.FixBoundLayouter;
 import cn.linhome.lib.poper.layouter.ViewBoundLayouter;
 
-/**
- * Created by Administrator on 2018/1/10.
- */
-
 public class AutoActivity extends SDBaseActivity
 {
     private Button btn_big;
