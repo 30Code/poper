@@ -46,6 +46,9 @@ public class TestPopView extends SDAppView
         setContentView(R.layout.view_test_pop);
         mListView = findViewById(R.id.lv_content);
 
+//        new BlurPoper(getActivity()).setTarget(this);
+//        new BlurPoper(getActivity()).setTarget(this).setPosition(FPoper.Position.TopOutsideCenter);
+
         mListView.setAdapter(mAdapter);
 
         final List<String> list = new ArrayList<>();
