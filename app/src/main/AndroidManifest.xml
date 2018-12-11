@@ -20,6 +20,7 @@
         <activity android:name=".ListViewActivity"/>
         <activity android:name=".DialogActivity"/>
         <activity android:name=".AutoActivity"/>
+        <activity android:name=".TestActivity"/>
     </application>
 
 </manifest>
