@@ -8,15 +8,7 @@ import android.widget.TextView;
 import com.fanwe.library.activity.SDBaseActivity;
 
 import cn.linhome.lib.poper.FPoper;
-import cn.linhome.lib.poper.layouter.BoundLayouter;
-import cn.linhome.lib.poper.layouter.FixBoundLayouter;
-import cn.linhome.lib.poper.layouter.ViewBoundLayouter;
 
-/**
- * des:
- * Created by 30Code
- * on 2018/12/11
- */
 public class TestActivity extends SDBaseActivity
 {
     private TextView tv_title;
@@ -45,7 +37,7 @@ public class TestActivity extends SDBaseActivity
         {
             mPopView = new TestPopView(this);
             mPopView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.MATCH_PARENT));
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
             mPopView.getPoper()
                     .setTarget(tv_title)
                     .setPosition(FPoper.Position.BottomOutsideCenter);
