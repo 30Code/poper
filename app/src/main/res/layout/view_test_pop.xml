@@ -5,10 +5,10 @@
     android:background="@color/res_bg_activity"
     android:orientation="vertical">
 
-    <com.fanwe.library.view.SDRecyclerView
+    <ListView
         android:id="@+id/lv_content"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:background="@color/green" />
 
 </LinearLayout>
